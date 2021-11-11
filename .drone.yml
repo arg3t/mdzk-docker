@@ -1,0 +1,10 @@
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    username: kevinbacon
+    password: pa55word
+    repo: fr1nge/mdzk
+    tags:
+      - latest
+      - '1.0'
