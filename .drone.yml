@@ -6,10 +6,8 @@ steps:
   image: plugins/docker
   settings:
     username: 
-      from_secret:
-        - username
+      from_secret: username
     password:
-      from_secret:
-        - password
+      from_secret: password
     repo: fr1nge/mdzk
     auto_tag: true
