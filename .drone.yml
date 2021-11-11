@@ -5,8 +5,12 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    username: kevinbacon
-    password: pa55word
+    username: 
+      from_secret:
+        - username
+    password:
+      from_secret:
+        - password
     repo: fr1nge/mdzk
     tags:
       - latest
