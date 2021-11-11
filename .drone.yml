@@ -11,3 +11,6 @@ steps:
       from_secret: password
     repo: fr1nge/mdzk
     auto_tag: true
+    tags:
+      - latest
+      - '1.0'
