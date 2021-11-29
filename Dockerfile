@@ -1,10 +1,8 @@
 FROM rust:latest
 
 RUN git clone https://github.com/mdzk-rs/mdzk.git
-RUN cd mdzk
-RUN cargo build
-RUN cp ./target/release/mdzk /bin
-RUN cd ..
+RUN cd mdzk && cargo build --release && cd /
+RUN cp ./mdzk/target/release/mdzk /bin
 
 WORKDIR /wiki
 CMD /bin/mdzk serve
